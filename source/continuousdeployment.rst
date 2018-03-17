@@ -144,10 +144,8 @@ To set it up:
    .. important:: Make sure you have copied the token, as explained in the GitHub docs.
 
    This token is basically the keys to the GitHub repo kingdom. You need to give it to Travis so that Travis can push the output files
-   to your repository. Like most access token, it's a generally a wise idea to encrypt it.
-
-#. `Encrypt the token <https://docs.travis-ci.com/user/environment-variables#Defining-encrypted-variables-in-.travis.yml>`__ that you created and copied in the previous step.
-#. Keep the encrypted token preciously.
+   to your repository. Like most access token, it's a generally a wise idea to encrypt it, we
+   will take care of this in a later step.
 
 You have configured Travis and GitHub so that Travis can push changes to your repo.
 You can now tell Travis what to do with your repo.
@@ -164,7 +162,7 @@ what to do.
    We need to tell Travis to:
 
    #. Install the an OS image and Python, as well as other languages you need, for example ``node.js``.
-   #. Install all the pieces requiered to build the docs such as Sphinx and the extensions. Spoiler alert: that's why we needed
+   #. Install all the pieces required to build the docs such as Sphinx and the extensions. Spoiler alert: that's why we needed
       the ``requirements.txt`` early on.
    #. Build the docs.
    #. Run some tests.
@@ -202,9 +200,20 @@ To automate the publishing of the documentation:
         local_dir: build/html
         on:
           branch: master
-      env:
-        global:
-          secure: <your encrypted key here>
+
+#. Install the travis gem:
+
+   #. Make sure Ruby is installed.
+   #. Run ``sudo gem install travis``.
+
+#. In the console, encrypt the token and add the encrypted value to your
+   .travis.yml file automatically with this command:
+
+   .. code-block:: bash
+
+      travis encrypt "GITHUB TOKEN" --add deploy.api_key
+
+   Your travis configuration file is updated.
 
 #. Push your file to your **master** branch.
 

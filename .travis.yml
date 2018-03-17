@@ -15,11 +15,12 @@ install:
 script:
 - make html
 after_success:
-  #call a script to deploy to S3 or whatever you want
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: $GH_TOKEN
+  github_token: "$GH_TOKEN"
   local_dir: build/html
   on:
     branch: master
+  api_key:
+    secure: QoT8epEnzl7/vOUYTmXC+KafKr+bRKALJb9aRj6WSqBAb2ro6xbEfMP+zGAPswy8puMvhpoT/j6VKqPJzfXuooX8+OELqjYA68JcR3+1lpCfrgf8/3dioY16kQ8pts40z+6y7+/NTDRa5qjEKzezhjSqO4Yv8kB+tCzn92gGUmeefk9ZH8GTBL8OsGu2tLiG/2Rw5mokEY7zaspMliT31UngRELJBqrcp/TikihvDOc0RLzawWyHOSeyphSzKVGEH5jNo1LR40MwdQ68BX+S0ty1kehMz+ZTLrzRrZbznYP5fV2f9HZ5opSMRl9c8WG5fULglUV4P6s70LUkJcHI9QlG00C8dDHqm6Tq1utuOJ0rXZlPZcge8N8vTxhxOlzJ5WBXvWxtlYbQdL43q2t+7zSNgozudJm7a7dRt8kJhyzNdVUKZiOoEBxmYP0m9UoNh0OEHm6Dh0ovennMA0qVyd+/LaeNYZ+4eoGS1diQXztOS1Qnh9uTe64ldeyN8gpA6Qx5mmluLEkNAmCg5KQX14MmTGZDK7FBKLwaBYWblDJT4jLEm6xh16dHyU7TmGJ6k/DEm5JXPS1HllnYIMzTULcK7OxPfOV8QLhEpLNRwjH8RbrWyjGEHx/oiB0JK5uXvpaFjcy7Do3JOvgYhnZuUSVSLrNhmDtsqU3gbwn9kEE=
