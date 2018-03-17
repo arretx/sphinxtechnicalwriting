@@ -80,7 +80,7 @@ Your repository host the content and depends on the software installed on the co
 
 These tools are not hosted but installed locally on the contributor's computer. If
 a contributor doesn't have Python installed, building the docs is a no-go. Same thing if the
-contributor doesn't have Sphinx, or a specific extension... This requiered setup to build the docs
+contributor doesn't have Sphinx, or a specific extension... This required setup to build the docs
 is called a **development environment**.
 
 Contributors must replicate this development environment to work on the docs. To make the creation of this
@@ -139,23 +139,14 @@ To set it up:
 
    You should see Travis CI in the list of services already added.
 
-#. `Create a token <https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/>`__ for Travis to be able to publish the docs on GitHub Pages.
-
-   .. important:: Make sure you have copied the token, as explained in the GitHub docs.
-
-   This token is basically the keys to the GitHub repo kingdom. You need to give it to Travis so that Travis can push the output files
-   to your repository. Like most access token, it's a generally a wise idea to encrypt it, we
-   will take care of this in a later step.
-
-You have configured Travis and GitHub so that Travis can push changes to your repo.
-You can now tell Travis what to do with your repo.
+Travis has access to the repositories you ticked. You can now tell Travis what to do with your repo.
 
 
 Setting up Travis to test and publish the documentation
 -------------------------------------------------------
 
 Travis looks for a file called ``.travis.yml`` at the root of your repo in order to know
-what to do.
+what to do with it.
 
 .. admonition:: Objective recap
 
