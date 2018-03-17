@@ -187,24 +187,10 @@ To automate the publishing of the documentation:
       deploy:
         provider: pages
         skip_cleanup: true
-        github_token: $GH_TOKEN
+        github_token: $GITHUB_TOKEN
         local_dir: build/html
         on:
           branch: master
-
-#. Install the travis gem:
-
-   #. Make sure Ruby is installed.
-   #. Run ``sudo gem install travis``.
-
-#. In the console, encrypt the token and add the encrypted value to your
-   .travis.yml file automatically with this command:
-
-   .. code-block:: bash
-
-      travis encrypt "GH_TOKEN" --add deploy.api_key
-
-   Your travis configuration file is updated.
 
 #. Push your file to your **master** branch.
 

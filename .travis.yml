@@ -18,9 +18,7 @@ after_success:
 deploy:
   provider: pages
   skip_cleanup: true
-  github_token: "$GH_TOKEN"
+  github_token: "$GITHUB_TOKEN"
   local_dir: build/html
   on:
     branch: master
-  api_key:
-    secure: ERfQIlVXjZPb0TXF85OUEGMsktOa8Xq2zLoqh7dBl+IkgXSB13Muvsg+CZIXSWz3SircPY5ZiDvKV9uy6gVbzJsZC1xdMhqRkXuvzVW8Sh91v7jFt9y6jaYjilPvyb+EKCHltCl+qczdIjSZ2vfz9ivuP9jI8OJQkyXgAtW/LYwJSWEe8sP0dJ8/Od/kXsqik+DnUzMywT3baqPZNurxDTdrN56Nkp2B1yJCIW0Rbxr6VpLfHKI+bFUyIk9l8ZLq80rBvViekbpAWZE+rZw+LovE3OpuHTP137/qqjhEZ33qgWQfgVfHSPWxZ6Z/Go2sIWlcqT7H515jP0CTcz3PxDHNJmzlqjdUBnVP3tGbRUiAyEBYkqdrFBlVCOp+nxSu2PdWaQ4ugNtX0z17FGjPskIrjTN4I1FbZK/Zf7b0H93eghySQO6viooY7Nzo4JUZu+KVjzvzlxel2qwCXXJ0UuV1bxKP0tHh5yd1J/TdXTngjjiRNbhUe5AxqryBew7DrY1EA93jUOdFwEWt2uRXQ8CfpNqDeMMVtWekMIJJkTJ/WUUjgDo0jO27ftgXXYSpXgxh5bkCPBWlow0ZBQ9v8I1zylKQwIh9TZe5eZWGXpX4yrsc8EuLvKGG0PxwpCxMYaiPKFzJ0HtMAV1ZKyCpvx3m+ID7R0TS5WALRgxoax4=
