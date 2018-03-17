@@ -202,7 +202,7 @@ To automate the publishing of the documentation:
 
    .. code-block:: bash
 
-      travis encrypt "GITHUB TOKEN" --add deploy.api_key
+      travis encrypt "GH_TOKEN" --add deploy.api_key
 
    Your travis configuration file is updated.
 
